@@ -11,6 +11,18 @@ function getPasswordOptions() {
     passLength = (prompt('How long would you like you password to be? Please enter a number between 10 & 64.'));
   }
 
+  var specialChar = confirm("Click 'OK' if you would like you password to include special characters. Or click 'Cancel' if not")
+  var numbericChar = confirm("Click 'OK' if you would like you password to include numeric characters. Or click 'Cancel' if not");
+  var lowerCase = confirm("Click 'OK' if you would like you password to include lowerCase characters. Or click 'Cancel' if not");
+  var upperCase = confirm("Click 'OK' if you would like you password to include numeric characters. Or click 'Cancel' if not");
+ 
+   // check if any of the above have been logged true, else request the user selects again
+   while(specialChar === false && numbericChar === false && lowerCase === false && upperCase === false) {
+     alert("You must select 'OK' for atleast one of character types");
+   }
+  
+}
+
 // Function for getting a random element from an array
 function getRandom(arr) {
 
