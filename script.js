@@ -6,8 +6,10 @@ var upperCasedCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-
-}
+  while(passLength <= 10 || passLength >= 64) {
+    alert('The password length must be between 10 and 64!');
+    passLength = (prompt('How long would you like you password to be? Please enter a number between 10 & 64.'));
+  }
 
 // Function for getting a random element from an array
 function getRandom(arr) {
