@@ -16,7 +16,8 @@ function getRandom(arr) {
 
 // Function to generate password with user input
 function generatePassword() {
-
+  passLength = (prompt('How long would you like you password to be? Please enter a number between 10 & 64.'));
+  getPasswordOptions();
 }
 
 // Get references to the #generate element
